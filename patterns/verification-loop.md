@@ -97,7 +97,7 @@ claim type presented as if it were the general case.
 second config source overrides it, no consequence-based bar, just "found
 something, stop."
 
-**Working loop:** Claim: "Simplemail's tracing is initialized exactly once."
+**Working loop:** Claim: "product foo's tracing is initialized exactly once."
 Check 1 (confirming): grep finds one tracer-init call in `main.go`. Check 2
 (falsifying): search for alternate init paths in startup/config code that
 could register a second tracer. None found. Update: confidence rises from

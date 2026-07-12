@@ -101,7 +101,7 @@ Key: Name the uncertainty + name the cost of being wrong.
 **Confirm**: "This looks unusual. Can you confirm you’re traveling in Texas today? If yes, I’ll approve immediately."
 **Result**: Fraud blocked OR customer retained. 1 question.
 
-### 5. AdTech / Revcontent
+### 5. AdTech
 **State**: Budget: 1 scoring pass. Confidence: 0.45. Leaf could be "tech" or "finance"
 **Bad**: Score both, waste compute
 **Confirm**: "Before scoring, check: does URL contain /finance/? If yes, skip tech leaf."

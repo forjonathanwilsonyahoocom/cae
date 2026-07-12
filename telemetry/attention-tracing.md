@@ -91,11 +91,11 @@ disproved: []
 
 ## Cross-Sector Examples
 
-### 1. Revcontent / AdTech
+### 1.  AdTech
 **Trace**: `strategy=eliminative, evidence_in=[device=android], decision="skip leaf_892"`
 **Use**: Count how many times eliminative saved a scoring pass. × 75M tokens = $ saved.
 
-### 2. Lore / Healthcare  
+### 2. Healthcare  
 **Trace**: `strategy=confirmatory, working_memory.confidence=0.4, decision="confirm: work or sleep"`
 **Use**: Did confirming actually raise confidence? If not, question was bad.
 

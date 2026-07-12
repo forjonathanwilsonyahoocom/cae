@@ -1,9 +1,3 @@
-# cae
-
-a procedural  knowledge framework for agentic work
-
-# READ THE MANIFESTO
-
 ---
 id: readme
 title: Readme
@@ -27,14 +21,19 @@ related:
   telemetry: ["attention-tracing"]
 ---
 
+# cae
+
+a procedural  knowledge framework for agentic work
+
+# READ THE MANIFESTO
+
+laugh out loud
+
 # IF YOU WANT TO CONTRIBUTE
 
 easiest way is come up with content for some undeveloped conceptual node here, then feed that to an llm with a link to this repo and this scaffolding file for format hints: 
 
-
 https://github.com/forjonathanwilsonyahoocom/cae/blob/master/tools/scaffoldAltFromDuckAi.py
-
-
 
 fork this repo then open a pr for me to review, 
 

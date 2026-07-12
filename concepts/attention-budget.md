@@ -1,3 +1,4 @@
+---
 id: attention-budget
 title: Attention Budget
 path: concepts/attention-budget.md
@@ -35,7 +36,7 @@ links:
     telemetry:
       - attention-tracing
       - budget-utilization
-
+---
 
 # Attention Budget
 

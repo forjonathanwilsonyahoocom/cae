@@ -10,7 +10,7 @@ stage_tags: [planning, budgeting, execution, verification, stopping, memory]
 skill_area_tags: [reasoning, grounding, evaluation, systems-design]
 risk_level: low
 links:
-  relates_to: ["MANIFESTO.md", "tools/scaffoldAltFromDuckAi.py"]
+  relates_to: ["MANIFESTO.md", "tools/scaffoldAltFromDuckAi.py", "tools/bootstrap_cae_v0_1.py"]
   causes: []
   prevents: ["undirected-discipline-sprawl", "hype-without-mechanism"]
 related:
@@ -27,9 +27,9 @@ a procedural  knowledge framework for agentic work
 
 # READ THE MANIFESTO
 
-laugh out loud
+laugh out loud - see what your stack thinks about it
 
-# IF YOU WANT TO CONTRIBUTE
+# IF YOU WANT TO CONTRIBUTE TO THIS REPO FOR ANY REASON
 
 easiest way is come up with content for some undeveloped conceptual node here, then feed that to an llm with a link to this repo and this scaffolding file for format hints: 
 

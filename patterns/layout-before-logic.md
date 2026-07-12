@@ -1,3 +1,36 @@
+---
+id: layout-before-logic
+title: Layout-Before-Logic (Enforced Topology)
+path: patterns/layout-before-logic.md
+version: "0.1"
+status: draft
+artifact_type: pattern
+type: pattern
+stage_tags: [verification, budgeting, learning, execution]
+skill_area_tags: [evaluation, decision-making, resource-allocation]
+risk_level: high
+links:
+  relates_to:
+    - concepts/attention-budget.md
+    - concepts/working-memory.md
+    - principles/evidence-over-confidence.md
+  causes: []
+  prevents:
+    - verification-starvation
+    - prompt-roulette
+    - overconfidence
+  related:
+    - patterns/verification-loop.md
+  principles:
+    - evidence-over-confidence
+    - diagnose-before-retry
+  laws:
+    - constraints-are-computational-inputs
+  telemetry:
+    - attention-tracing
+    - budget-utilization
+---
+
 # Pattern: Layout-Before-Logic (Enforced Topology)
 
 **Category:** Architectural Pattern

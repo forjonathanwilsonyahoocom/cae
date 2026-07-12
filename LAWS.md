@@ -29,12 +29,10 @@ Cases where structure emerged after computation.
 When can computation discover better structures?
 
 
-#CAE Law #1: Structure Precedes Computation
+# CAE Law #1: Structure Precedes Computation
 
-because it connects everything you've been working on:
-
-Phylo: structure before search
-smoke panels: constrain exploration before expensive computation
-Azure invalidation: classify before modeling
-experimentation: define measurements before changing systems
-agents: establish context before reasoning
+- structure before search
+- constrain exploration before expensive computation
+- classify before modeling
+- define measurements before changing systems
+- establish context before reasoning

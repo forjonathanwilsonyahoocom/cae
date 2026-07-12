@@ -38,6 +38,13 @@ What is deliberately excluded?
 ## Background
 
 Context and motivation.
+Human organizations have developed disciplines for allocating scarce attention under uncertainty: incident response, medicine, aviation, military command, scientific investigation, and distributed systems engineering.
+
+Autonomous systems now face the same fundamental problem.
+
+Capability is no longer the only constraint.
+
+The limiting resource is deciding where computation, verification, memory, and search effort should be applied.
 
 ---
 

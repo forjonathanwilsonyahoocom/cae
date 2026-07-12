@@ -1,5 +1,47 @@
 # cae
+
 a procedural  knowledge framework for agentic work
+
+# READ THE MANIFESTO
+
+---
+id: readme
+title: Readme
+path: README.md
+version: "0.2"
+status: draft — active
+artifact_type: readmedoc
+type: root
+stage_tags: [planning, budgeting, execution, verification, stopping, memory]
+skill_area_tags: [reasoning, grounding, evaluation, systems-design]
+risk_level: low
+links:
+  relates_to: ["MANIFESTO.md", "tools/scaffoldAltFromDuckAi.py"]
+  causes: []
+  prevents: ["undirected-discipline-sprawl", "hype-without-mechanism"]
+related:
+  principles: ["evidence-over-confidence", "legible-delegation"]
+  laws: []
+  patterns: ["mission-policy-separation", "search-shaping", "verification-budgeting"]
+  anti-patterns: ["prompt-roulette"]
+  telemetry: ["attention-tracing"]
+---
+
+# IF YOU WANT TO CONTRIBUTE
+
+easiest way is come up with content for some undeveloped conceptual node here, then feed that to an llm with a link to this repo and this scaffolding file for format hints: 
+
+
+https://github.com/forjonathanwilsonyahoocom/cae/blob/master/tools/scaffoldAltFromDuckAi.py
+
+
+
+fork this repo then open a pr for me to review, 
+
+i've pointed most of the LLMs hree and they all immediately come up with ideas. 
+
+this is a really intersting experiment that i have the privledge of being a part of
+
 
 Computational Attention Engineering does not propose a new AI model, architecture, or implementation framework. It proposes a discipline for engineering autonomous work: how systems decide what deserves computation, what evidence is sufficient, when to search, when to stop, and how experience improves future decisions.
 

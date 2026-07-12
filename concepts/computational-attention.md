@@ -1,157 +1,72 @@
-version: 0.1
+---
+name: "Computational Attention Engineering (CAE)"
+version: "0.1"
+status: "public-draft summary from duck ai running gpt5.4 nano"
+scope: "Engineering discipline (model-agnostic), not a software project"
+audience: ["autonomous agents", "researchers", "engineers", "teams shipping tool-using systems"]
+last-updated: "2026-07-12"
+---
 
-repository:
-  name: computational-attention-engineering
-  title: Computational Attention Engineering
-  description: >
-    An open engineering discipline for designing how autonomous systems
-    allocate finite computational attention under uncertainty.
+# Computational Attention Engineering (CAE)
 
-document_template:
-  sections:
-    - Purpose
-    - Position within Computational Attention Engineering
-    - Summary
-    - Key Concepts
-    - Engineering Guidance
-    - Examples
-    - Related Documents
-    - Open Questions
-    - Research Directions
-    - Keywords
-    - Revision History
+> Computational Attention Engineering is the discipline of designing how autonomous systems allocate finite computational attention under uncertainty.
 
-directories:
+## One-line purpose
+Make attention **measurable, spendable, and continuously improvable** through reusable engineering artifacts (policies, budgets, verification, telemetry, and memory compression)—without optimizing prompt wording.
 
-  - name: concepts
-    description: Core terminology and foundational definitions.
+## Why CAE belongs
+As systems become more capable, the bottleneck shifts from “ability” to **disciplined use of limited compute/search/verification effort**. CAE formalizes that discipline as portable, reviewable, model-agnostic artifacts.
 
-  - name: principles
-    description: Engineering principles that remain stable over time.
+## Non-goals (to keep the scope durable)
+- Not prompt optimization and not vendor-specific orchestration advice.
+- Not model capability comparisons.
+- Not “green” messaging; focus on engineering tradeoffs and measured efficiency.
 
-  - name: policies
-    description: Attention allocation strategies and decision policies.
+## What you’ll find here
+CAE artifacts emphasize:
+- **Mission vs Policy** separation
+- **Priors** and **anti-hypotheses** to reduce wasteful exploration
+- **Staged discovery** with explicit stop/exit criteria
+- **Consequence-weighted verification**
+- **Budgeting + telemetry** to enable continuous improvement
+- **Memory compression** into durable facts/hypotheses/questions
 
-  - name: patterns
-    description: Reusable engineering solutions.
+## Control loop (core structure)
+**Mission → Policy → Execution → Telemetry → Policy Adaptation**
 
-  - name: anti-patterns
-    description: Common failure modes.
+## Context Capsule (v0.1) — the seed concept
+As AI systems become more capable, the scarce resource shifts from intelligence to disciplined computational attention.
 
-  - name: telemetry
-    description: Measurement and observability.
+The engineering problem is no longer:
+> “How do I give the model more context?”
 
-  - name: verification
-    description: Trust, validation and evidence.
+It becomes:
+> “How do I allocate finite reasoning effort where it creates the most value?”
 
-  - name: memory
-    description: Memory architectures.
+Design philosophy:
+- Don’t maximize computation.
+- Maximize uncertainty reduced per unit of computation.
+- The goal is not smarter agents; it’s **attention that is engineered, measured, and improveable**.
 
-  - name: search
-    description: Retrieval and search methodologies.
+## Cross-references (draft map)
+- **Principles:** (add path you keep in your repo)
+- **Control loop:** (add path)
+- **Staged discovery:** (add path)
+- **Verification & consequence:** (add path)
+- **Budgeting & telemetry:** (add path)
+- **Memory compression:** (add path)
+- **Anti-patterns:** (add path)
 
-  - name: budgeting
-    description: Compute, latency and token allocation.
+## Open questions (starting list)
+- How should “attention units” be defined in a vendor-neutral way (tokens vs time vs tool calls vs FLOPs)?
+- What minimal telemetry predicts policy improvement across domains?
+- How should consequence profiles be standardized for different risk contexts?
+- What compression formats preserve correctness under uncertainty while staying interoperable?
 
-  - name: orchestration
-    description: Multi-agent coordination.
+## Future work (next artifacts to draft)
+1. Policy Card v0.1 as an execution interface for other agents
+2. Attention Budget Spec (categories, enforcement, degradation rules)
+3. Telemetry Schema (stage-level effort + verification outcomes)
+4. Investigation Playbook (stage-gated templates + stop rules)
+5. Evaluation Rubric (efficiency × correctness × verification integrity)
 
-  - name: experiments
-    description: Experimental methodology.
-
-  - name: metrics
-    description: Quantitative evaluation.
-
-  - name: adr
-    description: Architecture Decision Records.
-
-  - name: case-studies
-    description: Practical applications.
-
-  - name: glossary
-    description: Canonical terminology.
-
-documents:
-
-  - path: README.md
-    title: Computational Attention Engineering
-    purpose: Repository overview
-
-  - path: MANIFESTO.md
-    title: CAE Manifesto
-    purpose: Why the discipline exists
-
-  - path: concepts/computational-attention.md
-    title: Computational Attention
-
-  - path: concepts/attention-budget.md
-    title: Attention Budget
-
-  - path: concepts/attention-policy.md
-    title: Attention Policy
-
-  - path: principles/search-before-generation.md
-    title: Search Before Generation
-
-  - path: principles/evidence-over-confidence.md
-    title: Evidence Over Confidence
-
-  - path: principles/model-agnostic-design.md
-    title: Model Agnostic Engineering
-
-  - path: principles/continuous-improvement.md
-    title: Continuous Improvement
-
-  - path: search/search-strategies.md
-    title: Search Strategies
-
-  - path: search/retrieval-architectures.md
-    title: Retrieval Architectures
-
-  - path: memory/working-memory.md
-    title: Working Memory
-
-  - path: memory/long-term-memory.md
-    title: Long-Term Memory
-
-  - path: patterns/verification-loop.md
-    title: Verification Loop
-
-  - path: patterns/search-first.md
-    title: Search First Workflow
-
-  - path: patterns/iterative-refinement.md
-    title: Iterative Refinement
-
-  - path: anti-patterns/prompt-roulette.md
-    title: Prompt Roulette
-
-  - path: anti-patterns/unbounded-search.md
-    title: Unbounded Search
-
-  - path: telemetry/attention-tracing.md
-    title: Attention Tracing
-
-  - path: telemetry/token-accounting.md
-    title: Token Accounting
-
-  - path: verification/source-verification.md
-    title: Source Verification
-
-  - path: budgeting/token-budgets.md
-    title: Token Budgets
-
-  - path: budgeting/compute-budgets.md
-    title: Compute Budgets
-
-  - path: orchestration/multi-agent-coordination.md
-    title: Multi-Agent Coordination
-
-  - path: experiments/experimental-methodology.md
-    title: Experimental Methodology
-
-  - path: metrics/attention-efficiency.md
-    title: Attention Efficiency
-
-  - path: glossary/glossary.md
-    title: Glossary

@@ -37,9 +37,9 @@ https://github.com/forjonathanwilsonyahoocom/cae/blob/master/tools/scaffoldAltFr
 
 fork this repo then open a pr for me to review, 
 
-i've pointed most of the LLMs hree and they all immediately come up with ideas. 
+i've pointed most of the LLMs here and they all immediately come up with ideas. 
 
-this is a really intersting experiment that i have the privledge of being a part of
+this is a really interesting experiment that i have the privilege of being a part of
 
 
 Computational Attention Engineering does not propose a new AI model, architecture, or implementation framework. It proposes a discipline for engineering autonomous work: how systems decide what deserves computation, what evidence is sufficient, when to search, when to stop, and how experience improves future decisions.

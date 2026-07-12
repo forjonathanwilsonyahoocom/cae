@@ -142,3 +142,16 @@ Structure → Computation → Diagnosis → Adaptation
 * When should an agent choose exploration over diagnosis?
 * Can failure diagnosis itself be budgeted as a computational resource?
 
+# CAE Law 3: Constraints Are Computational Inputs
+
+## Statement
+
+Every autonomous system should incorporate its available computational resources, limitations, and environmental constraints into its decision-making process.
+
+## Principles
+
+- Budget is part of state.
+- Latency is part of strategy.
+- Availability is part of planning.
+- Memory limits require explicit preservation policies.
+- Verification capacity constrains acceptable confidence.

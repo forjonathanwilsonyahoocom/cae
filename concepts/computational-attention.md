@@ -49,7 +49,7 @@ Design philosophy:
 - The goal is not smarter agents; it’s **attention that is engineered, measured, and improveable**.
 
 ## Cross-references (draft map)
-- **Principles:** [../principals](../principals)
+- **Principles:** [../principles](../principles)
 - **Control loop:** (add path)
 - **Staged discovery:** (add path)
 - **Verification & consequence:** (add path)

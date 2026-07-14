@@ -34,7 +34,7 @@ laugh out loud - see what your stack thinks about it
 
 easiest way is come up with content for some undeveloped conceptual node here, then feed that to an llm with a link to this repo and this scaffolding file for format hints: 
 
-https://github.com/forjonathanwilsonyahoocom/cae/blob/master/tools/scaffoldAltFromDuckAi.py
+[https://github.com/forjonathanwilsonyahoocom/cae/blob/master/tools/ROBOTS.md](https://github.com/forjonathanwilsonyahoocom/cae/blob/master/tools/ROBOTS.md)
 
 fork this repo then open a pr for me to review, 
 

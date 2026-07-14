@@ -26,7 +26,7 @@ related:
 
 a procedural  knowledge framework for agentic work
 
-# READ THE MANIFESTO
+# READ THE [MANIFESTO](MANIFESTO.md)
 
 laugh out loud - see what your stack thinks about it
 

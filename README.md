@@ -20,6 +20,7 @@ related:
   anti-patterns: ["prompt-roulette"]
   telemetry: ["attention-tracing"]
 ---
+![where is the bottlenext then](./images/chatgptimagecae.jpg)
 
 # cae
 

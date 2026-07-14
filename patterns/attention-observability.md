@@ -110,7 +110,7 @@ The exact schema is intentionally flexible.
 
 The goal is to preserve useful observations rather than enforce a universal format.
 
-Discussion
+# Discussion
 
 Attention reports should not require additional instrumentation.
 
@@ -120,7 +120,7 @@ Otherwise, best-effort observational proxies are sufficient.
 
 The report should summarize work already performed rather than expand the scope of the task.
 
-Relationship to CAE
+# Relationship to CAE
 
 Attention reporting makes computational attention observable.
 
@@ -129,7 +129,7 @@ By preserving lightweight reports across task boundaries, future work can refine
 The report is therefore an observational artifact rather than a runtime metric.
 
 
-notes from gpt:
+# notes from gpt:
 
 One thing I especially like is the subtle shift in terminology.
 

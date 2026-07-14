@@ -48,14 +48,18 @@ Design philosophy:
 - Maximize uncertainty reduced per unit of computation.
 - The goal is not smarter agents; it’s **attention that is engineered, measured, and improveable**.
 
-## Cross-references (draft map)
+## Cross-references (draft map) 
+- **[Experiments](../experiments)** 
+- **[Concepts](../concepts)** 
 - **[Principles](../principles)** 
-- **Control loop:** (add path)
-- **Staged discovery:** (add path)
-- **Verification & consequence:** (add path)
-- **Budgeting & telemetry:** (add path)
-- **Memory compression:** (add path)
-- **Anti-patterns:** (add path)
+- **[Forces](../forces)** 
+- **[Patterns](../patterns)** 
+- **[Anti-patterns](../anti-patterns)** 
+- **[Telemetry](../telemetry)** 
+- **[Budgeting](../budgeting)** 
+- **[Search](../search)** 
+- **[Memory](../memory)** 
+- **[Topologies](../topologies)** 
 
 ## Open questions (starting list)
 - How should “attention units” be defined in a vendor-neutral way (tokens vs time vs tool calls vs FLOPs)?

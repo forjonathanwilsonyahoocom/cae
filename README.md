@@ -48,10 +48,15 @@ i've pointed most of the LLMs here and they all immediately come up with ideas.
 
 this is a really interesting experiment that i have the privilege of being a part of
 
+everything i've published here is an AI summary of a conversation on the topic, it is intended to provide an "easily delivered to AI" outline of the concepts
 
-Computational Attention Engineering does not propose a new AI model, architecture, or implementation framework. It proposes a discipline for engineering autonomous work: how systems decide what deserves computation, what evidence is sufficient, when to search, when to stop, and how experience improves future decisions.
+this repo started when I asked gpt how we would go about re-establishing our experimental context if the account was severed
 
-Context Capsule: Computational Attention Engineering v0.1
+after discussing for a while we came up with the overall shape and subject matter, and formatted in such that the entire repo can be digested into any LLM to quickly establish an experimental framework.
+
+## Computational Attention Engineering does not propose a new AI model, architecture, or implementation framework. It proposes a discipline for engineering autonomous work: how systems decide what deserves computation, what evidence is sufficient, when to search, when to stop, and how experience improves future decisions.
+
+### Context Capsule: Computational Attention Engineering v0.1
 
 Core thesis
 
@@ -64,11 +69,11 @@ It becomes:
 
 "How do I allocate finite reasoning effort where it creates the most value?"
 
-Working definition
+### Working definition
 
 Computational Attention Engineering is the discipline of designing how autonomous systems allocate finite computational attention under uncertainty.
 
-Primary design principles
+### Primary design principles
 
 Separate Mission (why the work exists) from Policy (how attention should be spent).
 Use priors to reduce unnecessary search.

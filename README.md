@@ -26,6 +26,8 @@ related:
 
 a procedural  knowledge framework for agentic work
 
+Jonathan Wilson et machina*
+
 # READ THE [MANIFESTO](MANIFESTO.md)
 
 laugh out loud - see what your stack thinks about it
@@ -86,3 +88,8 @@ Maximize uncertainty reduced per unit of computation.
 The goal is not smarter agents.
 
 The goal is making their attention measurable, spendable, and continuously improvable.
+
+
+# footnote
+* "et machina" denotes substantive computational collaboration by one or more AI systems under the direction and responsibility of the named human authors.
+

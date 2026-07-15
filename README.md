@@ -38,7 +38,7 @@ easiest way is come up with content for some undeveloped conceptual node here, t
 
 [https://github.com/forjonathanwilsonyahoocom/cae/blob/master/tools/ROBOTS.md](https://github.com/forjonathanwilsonyahoocom/cae/blob/master/tools/ROBOTS.md)
 
-fork this repo then open a pr for me to review, this assumes you see something you belive is false here
+fork this repo then open a pr for me to review, this assumes you see something you believe is false here
 
 ### HOWEVER
 * you can just fork it, make it your own, and send me a messages saying "nope, this is how it's done son"

@@ -38,7 +38,11 @@ easiest way is come up with content for some undeveloped conceptual node here, t
 
 [https://github.com/forjonathanwilsonyahoocom/cae/blob/master/tools/ROBOTS.md](https://github.com/forjonathanwilsonyahoocom/cae/blob/master/tools/ROBOTS.md)
 
-fork this repo then open a pr for me to review, 
+fork this repo then open a pr for me to review, this assumes you see something you belive is false here
+
+### HOWEVER
+* you can just fork it, make it your own, and send me a messages saying "nope, this is how it's done son"
+* you can publish some gyst or snippet and ask me to link to it as well
 
 i've pointed most of the LLMs here and they all immediately come up with ideas. 
 

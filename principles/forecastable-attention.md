@@ -25,3 +25,11 @@ links:
 [Rohan Khatavkar et machina
 Forecasting AI Agent Costs in Production](https://gist.github.com/rohankhatavkar-source/5e73adb5cdd0ecef2f1f5e44ce0868ab)
 
+## relates to concepts/computational-attention.md in the following ways
+
+ - "Separate fixed-cost from variable-cost workflows" → different attention distributions.
+ - "Measure interaction classes" → characterize attention policies rather than average behavior.
+ - "Pilot before projecting" → instrument before optimizing.
+ - "Cost controls into the architecture" → bounded attention.
+ - "The cheapest agent solves the problem in fewer steps" → attention efficiency.
+

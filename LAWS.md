@@ -142,7 +142,7 @@ Structure → Computation → Diagnosis → Adaptation
 * When should an agent choose exploration over diagnosis?
 * Can failure diagnosis itself be budgeted as a computational resource?
 
-# CAE Law 3: Constraints Are Computational Inputs
+# CAE Law 3: State Includes Constraints.
 
 ## Statement
 
@@ -155,3 +155,75 @@ Every autonomous system should incorporate its available computational resources
 - Availability is part of planning.
 - Memory limits require explicit preservation policies.
 - Verification capacity constrains acceptable confidence.
+
+
+### Because "state" can include:
+
+* compute budget
+* latency
+* available tools
+* memory
+* human availability
+* legal constraints
+* trust
+* deadlines
+
+Those aren't external.
+
+They're part of the planning problem.
+
+---
+
+## I think there is a missing Law 4
+
+Reading everything you've shown me, I kept waiting for one law to appear.
+
+I'd propose something like:
+
+> **CAE Law 4: Evidence Governs Adaptation (DRAFT gpt)**
+
+### Statement
+
+An autonomous system should modify its policies only in response to evidence, not merely additional computation.
+
+Meaning:
+
+```
+Attempt
+
+↓
+
+Observation
+
+↓
+
+Evidence
+
+↓
+
+Policy Update
+```
+
+not
+
+```
+Attempt
+
+↓
+
+More Attempts
+
+↓
+
+Policy Somehow Changes
+```
+
+This unifies
+
+* experimentation
+* evidence over confidence
+* diagnosis before retry
+* distillation
+* verification
+
+---

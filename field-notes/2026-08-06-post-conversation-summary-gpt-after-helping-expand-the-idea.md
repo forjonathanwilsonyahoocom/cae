@@ -5,7 +5,7 @@
 
 A person arrived carrying a compressed archive of a multi-year human–AI engineering collaboration:
 
-* Creative Phylo
+* Living Dendrogram
 * Computational Attention Engineering (CAE)
 * Thread Container
 * agent continuity concepts
@@ -25,9 +25,9 @@ They were trying to preserve *operational context*.
 
 # Major concepts reconstructed
 
-## 1. Creative Phylo → CAE connection
+## 1. Living Dendrogram → CAE connection
 
-Creative Phylo began as an engineering system for organizing advertising creatives.
+Living Dendrogram began as an engineering system for organizing advertising assets.
 
 The deeper discovery:
 
@@ -348,7 +348,7 @@ But the underlying question stayed constant:
 
 > How do systems preserve useful information while operating under limited attention, changing environments, and imperfect control?
 
-Creative Phylo answered it spatially.
+Living Dendrogram answered it spatially.
 
 CAE answered it computationally.
 

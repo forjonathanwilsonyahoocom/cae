@@ -243,5 +243,5 @@ If I came back to this summary a year from now, the sentence I'd most want to te
 
 > **"The repository is not the memory of the system; it is the evolving policy by which the system decides what is worth remembering, reasoning about, and changing."**
 
-Everything we discussed—CAE, Thread Containers, Creative Phylo, the distillation operator, budgeting, experimentation, and the proposed laws—can be viewed as different aspects of that single idea. If future work strengthens or overturns that statement, it will say something meaningful about the direction the whole project took.
+Everything we discussed—CAE, Thread Containers, LivingDendrograms, the distillation operator, budgeting, experimentation, and the proposed laws—can be viewed as different aspects of that single idea. If future work strengthens or overturns that statement, it will say something meaningful about the direction the whole project took.
 

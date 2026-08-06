@@ -100,9 +100,9 @@ It changes future computational behavior.
 
 ---
 
-### 4. Creative Phylo was reframed
+### 4. Living Dendrogram was reframed
 
-Rather than describing Creative Phylo primarily as a clustering system,
+Rather than describing Living Dendrogram primarily as a clustering system,
 it became clearer that the hierarchy functions as an attention allocation policy.
 
 Each depth corresponds to a different question,
@@ -207,7 +207,7 @@ Its strongest characteristic is not originality of any single component.
 
 Its strength is consistent integration.
 
-Creative Phylo, Thread Containers, budgeting, experimentation, governance, and agent workflows are gradually converging on one architectural language.
+Living Dendrogram, Thread Containers, budgeting, experimentation, governance, and agent workflows are gradually converging on one architectural language.
 
 That coherence is unusual.
 

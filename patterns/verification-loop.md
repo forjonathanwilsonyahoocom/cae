@@ -17,7 +17,7 @@ or too late (wasted budget re-confirming something already settled).
 ## Position within Computational Attention Engineering
 
 This is the pattern-level counterpart to `principles/evidence-over-confidence.md`
-and the verification-budget concept referenced in
+and the verification-budget concept referenced in `patterns/verification-budgeting.md`
 `principles/legible-delegation.md` and `anti-patterns/prompt-roulette.md`. If
 a verification budget answers "how much proof does this claim type need,"
 this document answers "what does spending that budget well actually look

@@ -1,0 +1,78 @@
+---
+title: Governance Decision Procedure
+path: governance/decision-procedure.md
+version: 0.1
+status: draft — proposed by Gemini & Maintainer
+---
+
+## Purpose
+
+Define the operational tiebreaker policy when core repository principles conflict—specifically the tension between **Verification Loops** (exhaustive confidence-building with falsification attempts) and **Fast Feedback Budgets** (bounded iteration, speed, and resource constraints). 
+
+Without an explicit rule, conflict resolution defaults to ad-hoc negotiation or context exhaustion. This document codifies how a solo maintainer (and future multi-contributor systems) resolves deadlocks deterministically.
+
+---
+
+## The Core Conflict
+
+* **The Verification Directive:** *"Don't stop until confidence crosses the consequence threshold, including at least one falsification attempt."* (Optimizes for correctness, safety, and permanence).
+* **The Budget Directive:** *"Don't exceed token/time limits; avoid elaboration-only progress and infinite loops."* (Optimizes for velocity, resource scarcity, and momentum).
+
+**The Failure Mode:** When an agent or maintainer faces an ambiguous, high-consequence claim under a tight budget, the system either:
+1. Breaks the budget to chase infinite verification (Prompt Roulette / Token Burnout).
+2. Abandons verification early and merges an unverified claim (False Confidence / Silent Drift).
+
+---
+
+## The Tiebreaker Hierarchy (Solo Maintainer Rule)
+
+When `verification-loop` metrics and `token-budget` limits conflict on a given claim, execution is governed by a strict precedence ladder. **Higher precedence outranks lower precedence unconditionally.**
+
+```text
+1. Safety & Reversibility Barrier (Can this mistake be rolled back easily?)
+       ↓ (If reversible)
+2. Consequence Taxonomy (Is this a high- or low-consequence claim?)
+       ↓ (If tied)
+3. Default Action Protocol (Action-bias vs. Pause-bias)
+
+```
+
+### Rule 1: Reversibility Outranks Rigor
+
+* **Principle:** If a change is fully reversible with zero external side effects (e.g., refactoring an internal helper function, adding a draft markdown file), **Budget wins**. Terminate the verification loop immediately, accept the lower confidence state, and commit.
+* **If Irreversible** (e.g., modifying database migrations, publishing public APIs, executing financial transactions), **Verification wins**. The budget must be expanded or the task paused, regardless of time cost.
+
+### Rule 2: Consequence-Gated Budget Extension
+
+When a verification loop exhausts its token budget before meeting its consequence threshold:
+
+* **Low-Consequence Claims:** Drop confidence bar. Mark artifact as `verified_partial: true` with recorded caveats. **Proceed.**
+* **High-Consequence Claims:** The budget exhaustion event *must* trigger a state change. The system cannot silently lower the bar. It must either:
+1. Request an explicit budget extension from the human.
+2. Transition the claim to an **Intractable State** (requiring human-in-the-loop review).
+
+
+
+### Rule 3: The Default-to-Draft Policy
+
+When human judgment is absent and a deadlock occurs between deep verification and delivery speed:
+
+* **Default Action:** Mark the artifact as `status: draft` or `status: experimental`.
+* Never merge an unverified high-consequence claim into `main` as `status: stable`. Force it into an isolated branch or clearly labeled experimental folder.
+
+---
+
+## Multi-Contributor Extension (Future Placeholder)
+
+When PCI scales beyond a solo maintainer to multi-agent or multi-human teams, the tiebreaker shifts from personal heuristic to programmatic protocol:
+
+* **Dispute Resolution:** If Agent A claims verification is complete and Agent B claims budget is exhausted, neither can override the other.
+* **Escalation Trigger:** The claim automatically routes to a **Third-Party Arbiter** (either a designated human lead or a higher-tier reasoning model constrained to security auditing) with a 24-hour SLA.
+
+---
+
+## Keep/Discard Criteria for this Document
+
+* **KEEP if:** It defines an explicit, unambiguous tiebreaker order ("When A and B conflict, do X; if X fails, do Y") rather than suggesting "team consensus."
+* **DISCARD if:** It relies on hand-wavy governance prose like "carefully balance speed and safety."
+

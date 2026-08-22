@@ -3,6 +3,7 @@ title: Verification Loop
 path: patterns/verification-loop.md
 version: 0.1
 status: draft — proposed by Claude (Anthropic), for review
+status: revised — proposed by Qwen3.5:9b, for review
 ---
 
 ## Purpose
@@ -15,7 +16,7 @@ or too late (wasted budget re-confirming something already settled).
 
 ## Position within Computational Attention Engineering
 
-This is the pattern-level counterpart to `verification/source-verification.md`
+This is the pattern-level counterpart to `principles/evidence-over-confidence.md`
 and the verification-budget concept referenced in
 `principles/legible-delegation.md` and `anti-patterns/prompt-roulette.md`. If
 a verification budget answers "how much proof does this claim type need,"
@@ -97,6 +98,56 @@ claim type presented as if it were the general case.
 second config source overrides it, no consequence-based bar, just "found
 something, stop."
 
+## Handling Intractable Claims (Revised By Qwen3.5:9b at the request of the maintainer)
+
+**Definition** — A claim is **intractable** if we cannot reach a confidence state where P(claim|evidence) ≈ 1 without violating cost or resource constraints. This occurs in two cases:
+
+1.  **Logical Impossibility of Direct Observation:** The event Y itself cannot be directly observed (e.g., "User Intent", "External System Behavior"). Observing correlated events X only yields bounded probability 
+P(Y|X).
+2.  **Cost Asymmetry with Diminishing Returns:** Each additional verification step increases confidence, but the marginal gain ΔP → 0 before hitting the consequence bar within budget.
+
+In this variant, the loop does not seek to prove the claim (which may be impossible); it seeks to **identify and document the uncertainty bound** remaining after all feasible checks.
+
+### The Intractable Stop Test
+The standard `Stop Test` (Confidence ≥ Consequence Bar) cannot be satisfied if confidence is bounded below 1 by intractability. Instead use a **Risk Threshold Exit**:
+
+-   **Condition:** Claim is High-Consequence AND P(Claim|All Feasible Evidence) < Threshold for Risk Acceptance.
+-   **Action:** Do not terminate with "Verified." Terminate with **"Proceed with Documented Residual Risk"** (proxy evidence exists but doesn't prove claim) OR **"Escalate to Review"**.
+-   **Output:** The claim state becomes `"Status: Assumed, Residual Risk: < 1 - P(Claim|Evidence)"`.
+
+### Engineering Guidance
+
+-   **Distinguish Proxy from Direct Evidence:** A proxy observation (X happened → Y probably happened) is not direct evidence of the claim itself. Proxy evidence increases confidence but does not eliminate residual 
+risk. Document the gap.
+-   **Document Assumptions** — When an intractable claim terminates early, record the *assumptions* that justify proceeding ("We assume no unauthorized access because we control the network boundary"). These assumptions 
+must be auditable later.
+-   **Calibrate Consequence Bars:** For low-consequence claims (e.g., "This API endpoint returns JSON"), allow intractable states (assume correct unless error). For high-consequence claims (e.g., "Financial transaction 
+is valid"), trigger human-in-the-loop if the claim cannot be directly proven.
+-   **Track P-Bound Limits:** If a loop terminates at P(Claim|Evidence) = 0.95 with no way to improve, and consequence requires ≥ 0.99, flag as **"Risk of Unknown Failure Mode"**. Do not let this silently proceed.
+
+### Examples
+
+**Intractable Low-Consequence:**
+Claim: "The user's local preference setting is persisted correctly."
+-   **Reality:** We cannot directly observe the disk write without risking data mutation. Any proxy signal (API 200) gives bounded probability P(Claim|Evidence).
+-   **Stop Test:** Proceed if P(Claim|Evidence) > Acceptance Threshold for low consequence (~0.70).
+-   **Outcome:** Status: `"Verified (Assumed)"` with caveat: "Disk persistence assumed on success response; direct write observation not feasible."
+
+**Intractable High-Consequence:**
+Claim: "The user has not leaked their private key to an attacker."
+-   **Reality:** We cannot check every endpoint the key touches. Observing no exfiltration events gives P(Claim|Evidence) < 1, but never = 1 unless we directly observe the key still being intact at time T+∞.
+-   **Stop Test:** Do not stop with confidence bar met. Trigger `HITL Escalation` or require hardware-backed attestation that *partially* mitigates risk but explicitly note residual P(Claim|Evidence) < 1.
+-   **Outcome:** Status: `"Verified (Proxy)"`. Report: "Residual Risk High, Mitigated by Isolation, Direct Proof Impossible."
+
+**Transition from Intractable to Verifiable:**
+Claim: "No unauthorized access occurred in the network."
+-   **State at T0:** Intractable (cannot observe every packet).
+-   **Action Over Time:** Deploy IDS that detects known attack patterns. As P(Claim|Evidence) rises, claim becomes Verifiable if confidence exceeds bar within budget.
+-   **Metadata:** `Last Verified Cost: $X`, `P(Bound): 0.95 → 0.98` (track as loop progresses).
+-   **Note:** Yes—add a `Last Verified Cost` timestamp and track the claim's transition from intractable → verifiable over time.
+
+***
+
 **Working loop:** Claim: "product foo's tracing is initialized exactly once."
 Check 1 (confirming): grep finds one tracer-init call in `main.go`. Check 2
 (falsifying): search for alternate init paths in startup/config code that
@@ -108,7 +159,6 @@ report as confirmed, not just asserted.
 
 ## Related Documents
 
-- `verification/source-verification.md`
 - `principles/legible-delegation.md` — a legible mission states the bar this
   loop should stop at; without that, the loop has no stop test to run.
 - `anti-patterns/prompt-roulette.md` — undiagnosed retries often skip this
@@ -128,6 +178,10 @@ report as confirmed, not just asserted.
   worth doing on every claim, or only on claims above some consequence
   threshold?
 
+### Modification to Open Questions
+*   How do we model the transition from "Intractable" to "Verifiable" as falsification costs drop (e.g., new monitoring tools)? When does a claim cease being intractable and become checkable? 
+Suggestion: Define threshold where P(Claim|Evidence) can reach ≥ Consequence Bar within 90% budget allocation.
+
 ## Research Directions
 
 - Compare claim survival rate (does the claim still hold under later,
@@ -145,4 +199,7 @@ independent confirmation, verification budget
 ## Revision History
 
 - v0.1 — initial draft, contributed by Claude (Anthropic) at the invitation
+  of the repository maintainer.
+  
+-v0.2 initial revise  contributed by Qwen3.5:9b  at the invitation
   of the repository maintainer.

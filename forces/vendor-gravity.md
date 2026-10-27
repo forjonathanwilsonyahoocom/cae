@@ -39,9 +39,9 @@ Industry reports show that 60 % of enterprises experience vendor lock‑in, an
 * A data‑provider whose API changed, forcing agents to rewrite adapters and causing a 2‑month outage.
 
 ## Related Artifacts
-* [network‑asynchrony.md](../network-asynchrony.md) – vendor‑gravity can amplify network delays.
-* [context‑depreciation.md](../context-depreciation.md) – heavy reliance on a vendor’s data can accelerate context loss.
-* [model‑volatility.md](../model-volatility.md) – vendor‑driven parameter drift.
+* [network‑asynchrony.md](./network-asynchrony.md) – vendor‑gravity can amplify network delays.
+* [context‑depreciation.md](./context-depreciation.md) – heavy reliance on a vendor’s data can accelerate context loss.
+* [model‑volatility.md](./model-volatility.md) – vendor‑driven parameter drift.
 
 ## Open Questions
 * How to quantify vendor‑gravity in a single metric?
